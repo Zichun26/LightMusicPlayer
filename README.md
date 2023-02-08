@@ -1,0 +1,2 @@
+# LightMusicPlayer
+跟着Leewyatt大佬的视频教程做的javafx音乐播放器
