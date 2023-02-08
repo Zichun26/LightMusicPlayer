@@ -1,0 +1,17 @@
+.root{
+    -fx-background-color: null;
+    -theme-color:#22c5fd;
+    -theme-color-fade:#A4D4FF;
+}
+
+.rx-media-progress-bar {
+    -fx-pref-height: 12px;
+    /*当前播放进度条颜色*/
+    -rx-current-fill: -theme-color-fade;
+    /*圆形按钮的颜色*/
+    -rx-thumb-fill: -theme-color;
+    -rx-thumb-size:3px;
+}
+.rx-media-progress-bar:hover {
+    -fx-pref-height:15px;
+}

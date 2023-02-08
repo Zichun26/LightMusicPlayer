@@ -1,0 +1,24 @@
+.root{
+    -fx-background-color: null;
+    -theme-color:#22c5fd;
+    -theme-color-fade:#A4D4FF;
+}
+
+
+.rx-lrc-view{
+    -fx-border-color:null;
+    -fx-background-color: rgba(245, 249, 250, 0.91);;
+}
+
+.rx-lrc-view .lrc-line{
+    -fx-font-size: 20px;
+    -fx-font-family:Consolas;
+    -fx-text-fill: rgba(0, 0, 0, 0.38);
+}
+
+.rx-lrc-view .lrc-line:playing{
+    -fx-font-size: 23px;
+    -fx-text-fill: -theme-color;
+    -fx-font-weight: lighter;
+}
+

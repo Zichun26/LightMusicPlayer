@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.leewyatt.rxcontrols.controls.RXLrcView?>
+<?import com.leewyatt.rxcontrols.controls.RXMediaProgressBar?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="playerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="content-pane" stylesheets="@../css/player.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zichun.player.PlayerController">
+   <top>
+      <AnchorPane fx:id="topPane" minWidth="1280.0" prefHeight="52.0" prefWidth="1280.0" styleClass="top-pane" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="53.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../USER/桌面/Java大作业/resources/icon/音符.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="53.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LightMusic" wrappingWidth="114.33724975585938">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="1436.0" layoutY="-2.0999999046325684" />
+            <HBox alignment="TOP_CENTER" layoutX="1124.0" layoutY="13.0" maxHeight="35.0" maxWidth="175.0" minHeight="25.0" minWidth="100.0" opacity="0.91" prefHeight="34.0" prefWidth="143.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="13.0">
+               <children>
+                  <StackPane maxWidth="33.0" onMouseReleased="#minimizeAcction" prefHeight="29.0" prefWidth="33.0">
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="minimize-btn" />
+                     </styleClass>
+                     <children>
+                        <Region prefHeight="29.0" prefWidth="15.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </Region>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </StackPane>
+                  <ToggleButton maxHeight="29.0" maxWidth="31.0" minHeight="30.0" minWidth="31.0" mnemonicParsing="false" onMouseReleased="#fullAcction" prefHeight="30.0" prefWidth="31.0">
+                     <graphic>
+                        <Region maxHeight="29.0" maxWidth="29.0" minHeight="29.0" minWidth="29.0" prefHeight="29.0" prefWidth="29.0" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="maxmize-btn" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <StackPane onMouseReleased="#closeAcction" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Region prefHeight="29.0" prefWidth="19.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="close-btn" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </StackPane>
+               </children>
+               <opaqueInsets>
+                  <Insets right="10.0" />
+               </opaqueInsets>
+            </HBox>
+            <TextField fx:id="musicSearchFiled" layoutX="560.0" layoutY="14.0" styleClass="music-search-field" visible="false" />
+            <Text layoutX="508.0" layoutY="31.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="搜索音乐" visible="false">
+               <font>
+                  <Font name="Microsoft YaHei" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="musicSongNameView" layoutX="184.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="288.24034881591797">
+               <font>
+                  <Font name="Consolas" size="13.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets left="5.0" right="5.0" />
+         </opaqueInsets>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane minWidth="1280.0" prefHeight="75.0" prefWidth="1280.0" styleClass="bottom-pane" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="musicImageView" fitHeight="61.0" fitWidth="67.0" layoutX="5.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+            <Slider fx:id="musicVolumeSilider" layoutX="1134.0" layoutY="28.0" maxWidth="86.0" prefHeight="24.0" prefWidth="86.0" styleClass="sound-slider" stylesheets="@../css/volumeBar.css" value="50.0" AnchorPane.rightAnchor="20.0" />
+            <ImageView fitHeight="28.0" fitWidth="24.0" layoutX="1110.0" layoutY="26.0" AnchorPane.rightAnchor="110.0">
+               <image>
+                  <Image url="@../../../../../USER/桌面/Java大作业/resources/icon/音量.png" />
+               </image>
+            </ImageView>
+            <RXMediaProgressBar fx:id="musicProgressBar" layoutX="5.0" layoutY="3.0" prefHeight="15.0" prefWidth="1833.0" styleClass="rx-media-progress-bar" stylesheets="@../css/mediaProgress.css" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+            <Label fx:id="musicTimeLabel" layoutX="103.0" layoutY="28.0" prefHeight="24.0" prefWidth="160.0" text="00:00 / 00:00">
+               <font>
+                  <Font name="Consolas" size="16.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="514.0" layoutY="8.0" prefHeight="70.0" prefWidth="252.0" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="514.0" AnchorPane.rightAnchor="514.0" AnchorPane.topAnchor="8.0">
+               <children>
+                  <ToggleButton fx:id="randomMusicBtn" mnemonicParsing="false" onMousePressed="#randomMusicAction" styleClass="random-music-btn">
+                     <graphic>
+                        <Region prefHeight="29.0" prefWidth="27.0" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="3.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <StackPane fx:id="preMusicBtn" onMousePressed="#preMusicAction" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Region prefHeight="32.0" prefWidth="35.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="prv-btn" />
+                     </styleClass>
+                  </StackPane>
+                  <ToggleButton fx:id="playMusicBtn" mnemonicParsing="false" onMousePressed="#playMusicAction" styleClass="play-btn">
+                     <graphic>
+                        <Region prefHeight="35.0" prefWidth="41.0" />
+                     </graphic>
+                  </ToggleButton>
+                  <StackPane fx:id="nextMusicBtn" onMousePressed="#nextMusicAction" prefHeight="150.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="next-btn" />
+                     </styleClass>
+                     <children>
+                        <Region prefHeight="32.0" prefWidth="35.0" />
+                     </children>
+                  </StackPane>
+                  <ToggleButton fx:id="singleMusicBtn" mnemonicParsing="false" onMousePressed="#singleMusicAction" styleClass="single-music-btn">
+                     <graphic>
+                        <Region prefHeight="29.0" prefWidth="27.0" />
+                     </graphic>
+                  </ToggleButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <left>
+      <AnchorPane fx:id="leftPane" prefHeight="658.0" prefWidth="364.0" styleClass="left-pane" stylesheets="@../css/listView.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="musicAddBtn" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#addMusicAction" prefHeight="38.0" prefWidth="335.0" styleClass="music-add-btn" text="添加音乐">
+               <font>
+                  <Font name="Consolas" size="16.0" />
+               </font>
+            </Button>
+            <Pane layoutX="4.0" layoutY="57.0" prefHeight="598.0" prefWidth="358.0" stylesheets="@../css/listView.css">
+               <children>
+                  <ListView fx:id="musicListView" layoutY="2.0" prefHeight="594.0" prefWidth="357.0">
+                     <styleClass>
+                        <String fx:value="music-list-pane" />
+                        <String fx:value="music-list-cell" />
+                     </styleClass>
+                  </ListView>
+               </children>
+            </Pane>
+         </children>
+         <BorderPane.margin>
+            <Insets left="1.0" />
+         </BorderPane.margin></AnchorPane>
+   </left>
+   <center>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="915.0" styleClass="rx-lrc-view" stylesheets="@../css/lrcView.css" BorderPane.alignment="CENTER">
+         <children>
+            <RXLrcView fx:id="musicLrcView" layoutX="104.0" layoutY="62.0" prefHeight="553.0" prefWidth="734.0" styleClass="lrc-view" stylesheets="@../css/lrcView.css" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="77.0" AnchorPane.topAnchor="62.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,13 @@
+.root{
+    -fx-background-color: null;
+    -theme-color:#22c5fd;
+    -theme-color-fade:#A4D4FF;
+}
+
+.sound-slider .track{
+    -fx-background-color: -theme-color-fade;
+}
+
+.sound-slider .thumb{
+    -fx-background-color: -theme-color;
+}

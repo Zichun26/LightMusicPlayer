@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.leewyatt.rxcontrols.controls.RXLrcView?>
+<?import com.leewyatt.rxcontrols.controls.RXMediaProgressBar?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../css/player.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane minWidth="1280.0" prefHeight="47.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="53.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../USER/桌面/Java大作业/resources/icon/音符.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="53.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LightMusic" wrappingWidth="114.33724975585938">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="1436.0" layoutY="-2.0999999046325684" />
+            <HBox alignment="TOP_CENTER" layoutX="1090.0" layoutY="8.0" maxHeight="35.0" maxWidth="175.0" minHeight="25.0" minWidth="100.0" opacity="0.91" prefHeight="29.0" prefWidth="175.0">
+               <children>
+                  <StackPane prefHeight="19.0" prefWidth="29.0">
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="tinymode-btn" />
+                     </styleClass>
+                     <opaqueInsets>
+                        <Insets left="-15.0" right="15.0" />
+                     </opaqueInsets>
+                     <children>
+                        <Region prefHeight="14.0" prefWidth="30.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </Region>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </StackPane>
+                  <StackPane maxWidth="33.0" prefHeight="29.0" prefWidth="33.0">
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="minimize-btn" />
+                     </styleClass>
+                     <children>
+                        <Region prefHeight="29.0" prefWidth="15.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </Region>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </StackPane>
+                  <ToggleButton maxHeight="29.0" maxWidth="31.0" minHeight="30.0" minWidth="31.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="31.0">
+                     <graphic>
+                        <Region maxHeight="29.0" maxWidth="29.0" minHeight="29.0" minWidth="29.0" prefHeight="29.0" prefWidth="29.0" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="maxmize-btn" />
+                     </styleClass>
+                  </ToggleButton>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Region prefHeight="32.0" prefWidth="35.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="close-btn" />
+                     </styleClass>
+                  </StackPane>
+               </children>
+               <opaqueInsets>
+                  <Insets right="10.0" />
+               </opaqueInsets>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets left="5.0" right="5.0" />
+         </opaqueInsets>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane minWidth="1280.0" prefHeight="75.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Slider fx:id="musicVolumeControl" layoutX="1134.0" layoutY="28.0" maxWidth="86.0" prefHeight="24.0" prefWidth="86.0" />
+            <ImageView fitHeight="28.0" fitWidth="24.0" layoutX="1110.0" layoutY="26.0">
+               <image>
+                  <Image url="@../../../../../USER/桌面/Java大作业/resources/icon/音量.png" />
+               </image>
+            </ImageView>
+            <RXMediaProgressBar layoutX="-5.0" layoutY="-4.0" prefHeight="15.0" prefWidth="1833.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+            <Label layoutX="103.0" layoutY="28.0" prefHeight="24.0" prefWidth="130.0" text="00:00 / 00:00">
+               <font>
+                  <Font name="Consolas" size="16.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="540.0" layoutY="5.0" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="prv-btn" />
+                     </styleClass>
+                     <children>
+                        <Region prefHeight="32.0" prefWidth="35.0" />
+                     </children>
+                  </StackPane>
+                  <ToggleButton mnemonicParsing="false" styleClass="play-btn">
+                     <graphic>
+                        <Region prefHeight="35.0" prefWidth="41.0" />
+                     </graphic>
+                  </ToggleButton>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <styleClass>
+                        <String fx:value="light-btn" />
+                        <String fx:value="next-btn" />
+                     </styleClass>
+                     <children>
+                        <Region prefHeight="32.0" prefWidth="35.0" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <left>
+      <AnchorPane prefHeight="667.0" prefWidth="326.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="667.0" prefWidth="327.0" styleClass="music-list-pane" />
+         </children></AnchorPane>
+   </left>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <right>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="663.0" prefWidth="931.0" BorderPane.alignment="CENTER">
+         <children>
+            <RXLrcView layoutX="108.0" layoutY="71.0" prefHeight="539.0" prefWidth="728.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="71.0" />
+            <AnchorPane layoutX="679.0" prefHeight="666.0" prefWidth="252.0" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
